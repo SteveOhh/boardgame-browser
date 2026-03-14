@@ -1,0 +1,26 @@
+{
+  "name": "boardgame-browser",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node node_modules/next/dist/bin/next dev -p 3132",
+    "build": "node node_modules/next/dist/bin/next build",
+    "start": "node node_modules/next/dist/bin/next start -p 3132",
+    "fetch-images": "node scripts/fetch-images.mjs",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name=boardgame-browser"
+  },
+  "dependencies": {
+    "next": "15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "tailwindcss": "^4",
+    "@tailwindcss/postcss": "^4",
+    "wrangler": "^3.0.0"
+  }
+}
