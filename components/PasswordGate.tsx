@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const PASSWORD = "gametime";
+const PASSWORD = process.env.NEXT_PUBLIC_PASSWORD || "";
 const STORAGE_KEY = "bgb-auth";
 
 interface Props {
