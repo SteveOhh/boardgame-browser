@@ -3,15 +3,9 @@ import fs from "fs";
 import path from "path";
 import type { Game } from "./types";
 
-const GAMES_PATH = path.join(
-  process.env.HOME || "/data/data/com.termux/files/home",
-  ".openclaw/apps/boardgame-picker/games.jsonl"
-);
+const GAMES_PATH = path.join(process.cwd(), "data/games.jsonl");
 
-const IMAGES_PATH = path.join(
-  process.env.HOME || "/data/data/com.termux/files/home",
-  ".openclaw/workspace/boardgame-browser/data/images.json"
-);
+const IMAGES_PATH = path.join(process.cwd(), "data/images.json");
 
 export function loadGames(): Game[] {
   const raw = fs
